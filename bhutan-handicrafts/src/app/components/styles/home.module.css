@@ -1,0 +1,11 @@
+.heroContainerText {
+  text-align: center;
+  font-size: 12rem;
+  font-weight: 700;
+  background-image: url("/Images/Bhutanflag.png"); /* note: use / for public folder */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px var(--extra-light);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
