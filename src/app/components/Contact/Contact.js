@@ -41,7 +41,7 @@ const Contact = () => {
       <div className={`section__container ${styles.contactContainer}`}>
         <div className={styles.contactCol}>
           <h4>Get in Touch with a Handicraft Specialist</h4>
-          <p>We're committed to responding within 24 hours.</p>
+          <p>We&apos;re committed to responding within 24 hours.</p>
         </div>
 
         <div className={styles.contactCol}>
@@ -49,7 +49,6 @@ const Contact = () => {
             <span><i className="ri-phone-line"></i></span>
             <h4>Call us</h4>
             <h5>+975 77209578</h5>
-            
           </div>
         </div>
 

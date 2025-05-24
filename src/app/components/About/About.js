@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image"; // Added Image component
 import { useEffect } from "react";
 
 const About = () => {
@@ -30,7 +31,7 @@ const About = () => {
             At Bhutan Handicrafts, we celebrate the vibrant artistry and timeless traditions of the Land of the Thunder Dragon.
             Our handcrafted collections embody centuries of Bhutanese heritage—from intricately woven textiles and hand-carved wooden artifacts
             to traditional paintings and clay pottery. Each piece tells a story of spiritual symbolism, cultural depth, and artisanal mastery.
-            Whether you're a collector, a cultural enthusiast, or simply looking to take a piece of Bhutan home, our handicrafts offer
+            Whether you&apos;re a collector, a cultural enthusiast, or simply looking to take a piece of Bhutan home, our handicrafts offer
             a truly authentic and soulfully crafted experience.
           </p>
 
@@ -53,10 +54,13 @@ const About = () => {
 
         {/* Right Image */}
         <div className="fade-up">
-          <img
+          <Image
             src="https://www.handicraftsbhutan.org/wp-content/uploads/2023/02/HAB-MAP-1-1024x531.png"
             alt="Bhutan Handicrafts"
+            width={1024}
+            height={531}
             className="w-full max-w-lg mx-auto rounded-lg shadow-xl transition-all duration-500 transform hover:scale-105"
+            priority
           />
         </div>
       </div>

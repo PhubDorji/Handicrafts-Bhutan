@@ -1,12 +1,13 @@
 'use client';
 
-import { useRouter } from 'next/navigation'; // <-- import this
+import Link from 'next/link'; // Added Link import
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { RiLock2Line, RiLockPasswordLine, RiMailLine, RiUserLine } from 'react-icons/ri';
 import styles from '../Login/styles/Login.module.css';
 
 export default function RegisterPage() {
-  const router = useRouter(); // <-- initialize router
+  const router = useRouter();
 
   const [formData, setFormData] = useState({
     username: '',
@@ -49,8 +50,8 @@ export default function RegisterPage() {
       } else {
         setSuccess('Registration successful! Redirecting to login...');
         setTimeout(() => {
-          router.push('/Login'); // <-- redirect here
-        }, 1500); // slight delay to show success message
+          router.push('/Login');
+        }, 1500);
       }
     } catch (err) {
       setError('Something went wrong. Please try again.');
@@ -131,11 +132,11 @@ export default function RegisterPage() {
           <button type="submit" className={styles.lbtn}>Register</button>
 
           <div className={styles.lregisterLink}>
-            <p>Already have an account? <a href="/login">Login</a></p>
+            <p>Already have an account? <Link href="/login">Login</Link></p>
           </div>
 
           <div className={styles.lbackHome}>
-            <a href="/" className={styles.lhomeBtn}>← Back to Home</a>
+            <Link href="/" className={styles.lhomeBtn}>← Back to Home</Link>
           </div>
         </form>
       </div>

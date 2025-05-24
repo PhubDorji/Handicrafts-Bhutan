@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link'; // Added Link import
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { RiLock2Line, RiUserLine } from 'react-icons/ri';
@@ -25,13 +26,11 @@ export default function LoginPage() {
         body: JSON.stringify({ username, password }),
       });
 
-      // Try to parse JSON response safely
       const data = await response.json().catch(() => ({}));
 
       if (!response.ok) {
         setError(data.message || 'Login failed');
       } else {
-        // Check if user object and userType exist
         const userType = data.user?.userType;
 
         if (!userType) {
@@ -40,7 +39,6 @@ export default function LoginPage() {
           return;
         }
 
-        // Redirect based on userType
         if (userType === 'customer') {
           router.push('/customer/dashboard');
         } else if (userType === 'seller') {
@@ -96,11 +94,11 @@ export default function LoginPage() {
           {error && <p style={{ color: 'red', marginTop: 10 }}>{error}</p>}
 
           <div className={styles.lregisterLink}>
-            <p>Don't have an account? <a href="/Registration">Register</a></p>
+            <p>Don&apos;t have an account? <Link href="/Registration">Register</Link></p>
           </div>
 
           <div className={styles.lbackHome}>
-            <a href="/" className={styles.lhomeBtn}>← Back to Home</a>
+            <Link href="/" className={styles.lhomeBtn}>← Back to Home</Link>
           </div>
         </form>
       </div>
