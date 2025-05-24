@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lisu+Bosa:wght@600;800&display=swap');
 
 :root {
@@ -9,7 +9,7 @@
   --extra-light: rgba(255, 255, 255, 0.5);
   --white: #ffffff;
   --header-font: "Lisu Bosa", serif;
-}
+} */
 
 .body {
   display: flex;
