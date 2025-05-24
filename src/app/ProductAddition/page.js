@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image"; // Added Next.js Image component
 import { useEffect, useState } from "react";
 
 export default function ProductForm() {
@@ -74,11 +75,15 @@ export default function ProductForm() {
         {/* Image Upload */}
         <div className="flex flex-col items-center mb-4">
           {preview ? (
-            <img
-              src={preview}
-              alt="Preview"
-              className="w-32 h-32 object-cover mb-2 border-2 border-gray-700 rounded"
-            />
+            <div className="w-32 h-32 relative mb-2 border-2 border-gray-700 rounded">
+              <Image
+                src={preview}
+                alt="Preview"
+                fill
+                className="object-cover"
+                unoptimized // Required for blob URLs
+              />
+            </div>
           ) : (
             <div className="w-32 h-32 bg-gray-700 flex items-center justify-center mb-2 text-gray-400 rounded">
               📷 Upload Image

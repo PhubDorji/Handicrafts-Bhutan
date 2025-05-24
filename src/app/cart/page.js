@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image'; // Added Next.js Image component
 import { useEffect, useState } from 'react';
 
 const CartPage = () => {
@@ -44,12 +45,16 @@ const CartPage = () => {
               className="flex items-center justify-between bg-[#1e1e1e] p-4 rounded-md shadow"
             >
               <div className="flex items-center gap-4">
-                {/* 👇 Image */}
-                <img
-                  src={item.productImage || '/product/placeholder.png'} // fallback if image missing
-                  alt={item.productName}
-                  className="w-20 h-20 object-cover rounded"
-                />
+                {/* 👇 Image - Replaced img with Next.js Image */}
+                <div className="relative w-20 h-20">
+                  <Image
+                    src={item.productImage || '/product/placeholder.png'}
+                    alt={item.productName}
+                    fill
+                    className="object-cover rounded"
+                    unoptimized // Required for external images
+                  />
+                </div>
 
                 {/* 👇 Product info */}
                 <div>

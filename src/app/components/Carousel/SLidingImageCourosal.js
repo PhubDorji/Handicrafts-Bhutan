@@ -1,4 +1,3 @@
-// === SLidingImageCourosal.js ===
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -38,6 +37,7 @@ const images = [
     thumbnailDescription: 'Minimalist bamboo pen holder.',
   },
 ];
+
 const SLidingImageCourosal = () => {
   const carouselRef = useRef(null);
   const slistRef = useRef(null);
