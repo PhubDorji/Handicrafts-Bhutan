@@ -46,7 +46,7 @@ const CartPage = () => {
               <div className="flex items-center gap-4">
                 {/* 👇 Image */}
                 <img
-                  src={item.productImage || '/placeholder.png'} // fallback if image missing
+                  src={item.productImage || '/product/placeholder.png'} // fallback if image missing
                   alt={item.productName}
                   className="w-20 h-20 object-cover rounded"
                 />

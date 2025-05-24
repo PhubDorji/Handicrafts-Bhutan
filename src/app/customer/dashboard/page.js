@@ -4,13 +4,12 @@ import Contact from "@/app/components/Contact/Contact";
 import Footer from "@/app/components/Footer/Footer";
 import Gallery from "@/app/components/Gallery/Gallery";
 import Hero from "@/app/components/Hero/Hero";
-import LandingNavbar from "@/app/components/LandingNavbar";
+import Navbar from "@/app/components/Navbar/customernav";
 import ProductCard from "@/app/components/ProductCard/ProductCard";
-
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
-      <LandingNavbar /> 
+      <Navbar />
       <Carousel /> {/* ✅ Carousel Component */}
       <About />
       <ProductCard />
