@@ -24,7 +24,7 @@ const PopularProducts = () => {
 
     const fetchProducts = async () => {
       try {
-        const res = await fetch('/api/fetchproduct?limit=20');
+        const res = await fetch('/api/fetchproduct?limit=5');
         if (!res.ok) throw new Error('Failed to fetch products');
         const data = await res.json();
         setProducts(data.products || []);
