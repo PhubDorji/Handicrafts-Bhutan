@@ -99,9 +99,9 @@ const Navbar = () => {
               {accountDropdown && (
                 <div className="absolute right-0 mt-2 bg-[#121212] border border-[#66f2c5] rounded-md shadow-md py-2 w-64 z-50">
                   <div className="px-4 py-3 border-b border-[#66f2c5]">
-                    <p className="text-white font-medium">Great Stack</p>
+                    <p className="text-white font-medium">Customer1</p>
                     <p className="text-sm text-gray-400">
-                      user.greatstack@gmail.com
+                      Customer1@gmail.com
                     </p>
                   </div>
                   <Link
@@ -169,9 +169,9 @@ const Navbar = () => {
             {/* Account Dropdown in Mobile */}
             <div className="flex flex-col pl-4 space-y-2 text-white">
               <div className="mb-2">
-                <p className="font-medium">Great Stack</p>
+                <p className="font-medium">Customer1</p>
                 <p className="text-sm text-gray-400">
-                  user.greatstack@gmail.com
+                  Customer1@gmail.com
                 </p>
               </div>
               <Link
