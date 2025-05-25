@@ -7,35 +7,35 @@ import styles from '../styles/Gallery.module.css';
 const galleryItems = [
   {
     id: 1,
-    image: "/images/Home Imagees/g1.jpg",
+    image: "/Images/Home Imagees/g1.jpg",
     alt: "Yathra Weaving",
     title: "Yathra Weaving",
     location: "Bumthang"
   },
   {
     id: 2,
-    image: "/images/Home Imagees/g2.jpg",
+    image: "/Images/Home Imagees/g2.jpg",
     alt: "Wood Carving",
     title: "Wood Carving",
     location: "Thimphu"
   },
   {
     id: 3,
-    image: "/images/Home Imagees/g3.jpg",
+    image: "/Images/Home Imagees/g3.jpg",
     alt: "Handmade Paper",
     title: "Handmade Paper",
     location: "Punakha"
   },
   {
     id: 4,
-    image: "/images/Home Imagees/g4.jpg",
+    image: "/Images/Home Imagees/g4.jpg",
     alt: "Clay Pottery",
     title: "Clay Pottery",
     location: "Lhuentse"
   },
   {
     id: 5,
-    image: "/images/Home Imagees/g5.jpg",
+    image: "/Images/Home Imagees/g5.jpg",
     alt: "Bronze Statues",
     title: "Bronze Statue",
     location: "Paro"
