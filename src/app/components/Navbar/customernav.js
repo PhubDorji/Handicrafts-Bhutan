@@ -126,7 +126,7 @@ const Navbar = () => {
                     <span>My Orders</span>
                   </Link>
                   <Link
-                    href="/logout"
+                    href="/Login"
                     className="flex items-center px-4 py-2 text-white hover:bg-[#1e1e1e] space-x-2"
                   >
                     <i className="ri-logout-box-r-line"></i>
@@ -196,7 +196,7 @@ const Navbar = () => {
                 <span>My Orders</span>
               </Link>
               <Link
-                href="/page"
+                href="/Login"
                 className="flex items-center space-x-2 hover:text-[#66f2c5]"
               >
                 <i className="ri-logout-box-r-line"></i>

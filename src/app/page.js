@@ -6,7 +6,7 @@ import Gallery from "./components/Gallery/Gallery";
 import Hero from "./components/Hero/Hero";
 import LandingNavbar from "./components/Navbar/LandingNavbar";
 // import Navbar from "./components/Navbar";
-import ProductCardSection from "./components/ProductCard/ProductCard";
+import ProductCardSection from "./components/ProductCard/HomePopularProducts";
 
 
 export default function HomePage() {

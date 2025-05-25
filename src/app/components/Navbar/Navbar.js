@@ -5,9 +5,11 @@ import { useState } from "react";
 const Navbar = ({ isSeller = false }) => {
   const [searchActive, setSearchActive] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [accountDropdown, setAccountDropdown] = useState(false);
 
   const toggleSearch = () => setSearchActive(!searchActive);
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleAccountDropdown = () => setAccountDropdown(!accountDropdown);
 
   // Common nav links for landing pages
   const navLinks = [
@@ -118,13 +120,55 @@ const Navbar = ({ isSeller = false }) => {
                   )}
                 </div>
 
-                {/* Account */}
-                <Link href="/Login">
-                  <span className="cursor-pointer hover:text-[#66f2c5] text-white flex items-center space-x-1">
+                {/* Account Dropdown */}
+                <div className="relative">
+                  <span
+                    onClick={toggleAccountDropdown}
+                    className="cursor-pointer hover:text-[#66f2c5] text-white flex items-center space-x-1"
+                  >
                     <i className="ri-user-line text-xl"></i>
                     <span>Account</span>
                   </span>
-                </Link>
+
+                  {accountDropdown && (
+                    <div className="absolute right-0 mt-2 bg-[#121212] border border-[#66f2c5] rounded-md shadow-md py-2 w-64 z-50">
+                      <div className="px-4 py-3 border-b border-[#66f2c5]">
+                        <p className="text-white font-medium">Admin</p>
+                        <p className="text-sm text-gray-400">
+                          Admin1@gmail.com
+                        </p>
+                      </div>
+                      <Link
+                        href="/account"
+                        className="flex items-center px-4 py-2 text-white hover:bg-[#1e1e1e] space-x-2"
+                      >
+                        <i className="ri-settings-3-line"></i>
+                        <span>Manage Account</span>
+                      </Link>
+                      <Link
+                        href="/cart"
+                        className="flex items-center px-4 py-2 text-white hover:bg-[#1e1e1e] space-x-2"
+                      >
+                        <i className="ri-bar-chart-line"></i>
+                        <span>Analytics</span>
+                      </Link>
+                      <Link
+                        href="/orders"
+                        className="flex items-center px-4 py-2 text-white hover:bg-[#1e1e1e] space-x-2"
+                      >
+                        <i className="ri-money-dollar-circle-line"></i>
+                        <span>Payments</span>
+                      </Link>
+                      <Link
+                        href="/Login"
+                        className="flex items-center px-4 py-2 text-white hover:bg-[#1e1e1e] space-x-2"
+                      >
+                        <i className="ri-logout-box-r-line"></i>
+                        <span>Sign Out</span>
+                      </Link>
+                    </div>
+                  )}
+                </div>
               </>
             )}
 
@@ -191,12 +235,47 @@ const Navbar = ({ isSeller = false }) => {
                   />
                 </div>
 
-                <Link href="/Login">
-                  <span className="cursor-pointer hover:text-[#66f2c5] text-white flex items-center space-x-1">
-                    <i className="ri-user-line text-xl"></i>
-                    <span>Account</span>
-                  </span>
-                </Link>
+                {/* Account Dropdown in Mobile */}
+                <div className="flex flex-col pl-4 space-y-2 text-white">
+                  <div className="mb-2">
+                    <p className="font-medium">Admin</p>
+                    <p className="text-sm text-gray-400">
+                      Admin1@gmail.com
+                    </p>
+                  </div>
+                  <Link
+                    href="/account"
+                    className="flex items-center space-x-2 hover:text-[#66f2c5]"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <i className="ri-settings-3-line"></i>
+                    <span>Manage Account</span>
+                  </Link>
+                  <Link
+                    href="/analytics"
+                    className="flex items-center space-x-2 hover:text-[#66f2c5]"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <i className="ri-bar-chart-line"></i>
+                    <span>Analytics</span>
+                  </Link>
+                  <Link
+                    href="/orders"
+                    className="flex items-center space-x-2 hover:text-[#66f2c5]"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <i className="ri-money-dollar-circle-line"></i>
+                    <span>Payments</span>
+                  </Link>
+                  <Link
+                    href="/Login"
+                    className="flex items-center space-x-2 hover:text-[#66f2c5]"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <i className="ri-logout-box-r-line"></i>
+                    <span>Sign Out</span>
+                  </Link>
+                </div>
               </>
             )}
           </div>
