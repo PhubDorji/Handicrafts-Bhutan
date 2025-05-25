@@ -76,7 +76,7 @@ const CartPage = () => {
             <i className="ri-shopping-cart-line text-4xl text-gray-500"></i>
           </div>
           <h2 className="text-xl font-medium text-white mb-2">Your cart is empty</h2>
-          <p className="text-gray-400 mb-6">Looks like you haven't added anything to your cart yet</p>
+          <p className="text-gray-400 mb-6">Looks like you haven&apos;t added anything to your cart yet</p>
           <button
             onClick={() => router.push('/')}
             className="px-6 py-3 bg-[#66f2c5] text-black rounded-md hover:bg-[#52d8b0] transition font-medium"
